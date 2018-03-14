@@ -1,2 +1,2 @@
-Hello, This is TypeIdea -- Blog system based on Djanog.
+Hello, This is TypeIdea -- Blog system based on Django.
 
