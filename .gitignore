@@ -9,6 +9,13 @@ __pycache__/
 # C extensions
 *.so
 
+.idea/
+typeidea-env/
+typeidea/blog/
+typeidea/db.sqlite3
+typeidea/typeidea/db.sqlite3
+
+
 # Distribution / packaging
 .Python
 env/
