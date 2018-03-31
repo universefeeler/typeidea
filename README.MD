@@ -6,7 +6,7 @@
 
 ## Project Structure
 
-![](/Users/macbook/myproject/typeidea/typeidea/Typeidea实体关系图.jpeg)
+![](http://imglf5.nosdn.127.net/img/djBlNVYzdmRMZEpxZmhNbDVHV1IwVGYrT0FqWVdrbVNXc3Z1U1BWZUxWVll0cjBmZjZaT3J3PT0.jpeg?imageView&thumbnail=1844y1436&type=jpg&quality=96&stripmeta=0&type=jpg)
 
 
 
