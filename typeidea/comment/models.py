@@ -9,7 +9,7 @@ from blog.models import Post
 
 
 class Comment(models.Model):
-    post = models.ForeignKey(Post, verbose_name='文章')
+    post = models.ForeignKey(Post, verbose_name='文章', on_delete=models.CASCADE)
     content = models.CharField(max_length=2000, verbose_name='内容')
     nickname = models.CharField(max_length=50, verbose_name="昵称")
     website = models.URLField(verbose_name="昵称")

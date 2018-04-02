@@ -20,10 +20,7 @@
 ## Authors
 
 - **the5fire** - *Initial work* 
-
 - **huangke** 
-
-  ​
 
 ## License
 
