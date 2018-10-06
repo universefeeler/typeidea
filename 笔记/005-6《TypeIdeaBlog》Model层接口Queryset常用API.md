@@ -90,6 +90,8 @@ Unresolved attribute reference 'objects' for class 'Category'
 
 objects是Manager
 
+#### 链式调用接口
+
 - all()	查询所有
 
 - filter()  查询过滤
@@ -107,3 +109,47 @@ objects是Manager
   # 随机排序
   ```
 
+#### 非链式
+
+- get() 只返回一个，如果有多个满足条件就会报错
+
+- create()
+
+- get_or_create()，返回一个元组
+
+  ```python
+  cate, is_created = Category.objects.get_or_create(name='django', owner=self.user)
+  print(cate)
+  print(is_created)
+  ```
+
+- update_or_create() 同上
+
+- count()
+
+- latest() 查询最新的一个
+
+- ealiest()查询最早的一个
+
+  ```python
+  cate = Category.objects.latest('created_time')
+  ```
+
+- first() 按id来排序取第一个
+
+- last() 按id来排序取最后一个
+
+- exists() 取limit=1的一个
+
+  ```python
+  cate = Category.objects.exists()
+  print(cate)
+  print(connection.queries)
+          
+  True
+  [{'sql': 'SELECT (1) AS "a" FROM "blog_category" LIMIT 1', 'time': '0.000'}]
+  ```
+
+- bulk_create() 批量插入，更快更方便
+
+- update() 批量修改
