@@ -14,33 +14,47 @@ TypeIdea的app划分是通过模型来进行划分的
 - blank默认为False，如果为True则可以为空
 - Verbose_name是后台显示名称
 
-#### ForeignKey()
+- ForeignKey()
 
-如果外键关联的模型还没建立时，外键字段就会报错
+  如果外键关联的模型还没建立时，外键字段就会报错
 
-对于Post这个类来说，category是它的一个成员属性，或者称为类级属性，类级属性的特点就是我在这个类被创建的时候，成员属性就会被创建。也就是说，在你import的时候，它就会执行这个属性
+  对于Post这个类来说，category是它的一个成员属性，或者称为类级属性，类级属性的特点就是我在这个类被创建的时候，成员属性就会被创建。也就是说，在你import的时候，它就会执行这个属性
 
-```python
-def say_hi():
-    print("hi")
-    return 'hi'
+  ```python
+  def say_hi():
+      print("hi")
+      return 'hi'
+  
+  
+  class Foo(object):
+      a = 'name'
+      b = say_hi()
+  ```
 
-
-class Foo(object):
-    a = 'name'
-    b = say_hi()
-```
-
-```shell
- from aa import Foo   
- # 会打印出hi
-```
-
-
-
-> 如何做？
-
-将Category写成字符串，Python会通过反射或者其他方式去寻找到这个类，父级类的时候也可以这样用。
+  ```shell
+   from aa import Foo   
+   # 会打印出hi
+  ```
 
 
+
+  > 如何做？
+  >
+  > 将Category写成字符串，Python会通过反射或者其他方式去寻找到这个类，父级类的时候也可以这样用。
+
+- choices
+
+  ```python
+  STATUS_ITEMS = (
+  (1, '上线'),
+  (2, '草稿'),
+  (3, '删除')
+  )
+  
+  # 像删除这类特殊操作可以选99这样的数字
+  ```
+
+
+
+Django.contrib属于贡献的代码，包括admin，属于非核心模块。
 
