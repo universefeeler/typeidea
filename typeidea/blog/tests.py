@@ -1,5 +1,3 @@
-from django.test import TestCase
-
 # Create your tests here.
 
 from django.contrib.auth.models import User
@@ -15,7 +13,11 @@ class TestCategory(TestCase):
         for i in range(10):
             category_name = 'cate_%s' % i
             Category.objects.create(name=category_name, owner=user)
-    
+
     def test_filter(self):
-        queryset = Category.objects.first()
-        print(queryset.name)
+        categories = Category.objects.all()
+        print(categories.query)
+        categories = categories.filter(status=1)
+        print(categories.query)
+        print(connection.queries)
+        print(len(categories))
